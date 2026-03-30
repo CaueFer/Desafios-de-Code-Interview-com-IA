@@ -2,7 +2,7 @@
 # Link: https://leetcode.com/problems/min-stack/
 # Estrutura de dados: Pilha
 
-# Integrante: Walter Theodoro
+# Integrante: Caue Fernandes
 
 # Problema
 # Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
