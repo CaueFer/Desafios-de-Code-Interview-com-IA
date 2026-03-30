@@ -1,25 +1,24 @@
-# Desafio Valid Parentheses
-# Link: https://leetcode.com/problems/valid-parentheses/ 
-# Estrutura de dados: Pilha 
+# Desafio Best Time to Buy and Sell Stock
+# Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+# Estrutura de dados: Array
 
-# Integrante: Caue Fernandes Caetano
+# Integrante: Caue Fernandes
 
 # Problema
-# Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-# An input string is valid if:
-#   - Open brackets must be closed by the same type of brackets.
-#   - Open brackets must be closed in the correct order.
-#   - Every close bracket has a corresponding open bracket of the same type.
+# You are given an array prices where prices[i] is the price of a given stock on the ith day.
+# You want to maximize your profit by choosing a single day to buy one stock and choosing a
+# different day in the future to sell that stock. Return the maximum profit you can achieve.
+# If you cannot achieve any profit, return 0.
 
 # Solução
-def is_valid(s): 
-    pilha = [] 
-    mapa = {')':'(', '}':'{', ']':'['} 
-    for c in s: 
-        if c in mapa: 
-            topo = pilha.pop() if pilha else '#' 
-            if mapa[c] != topo: 
-                return False 
-        else: 
-            pilha.append(c) 
-    return not pilha 
+def max_profit(prices):
+    menor = float('inf')
+    lucro = 0
+    for p in prices:
+        menor = min(menor, p)
+        lucro = max(lucro, p - menor)
+    return lucro
+
+# Testes adicionais
+print(max_profit([7,1,5,3,6,4]))
+print(max_profit([7,6,4,3,1]))
