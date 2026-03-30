@@ -2,7 +2,7 @@
 # Link: https://leetcode.com/problems/daily-temperatures/
 # Estrutura de dados: Pilha Monotônica
 
-# Integrante: Walter Theodoro
+# Integrante: Caue Fernandes
 
 # Problema
 # Given an array of integers temperatures representing daily temperatures, return an array answer
